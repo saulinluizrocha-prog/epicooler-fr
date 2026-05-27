@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EpiCooler® – Le refroidisseur portable N°1 en France | Offre Spéciale</title>
+  <meta name="description" content="EpiCooler® – Le mini-climatiseur personnel noté N°1 dans le monde. Compact, puissant, livraison rapide. Profitez de votre remise spéciale aujourd'hui !" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1960FF;
+      --blue-dark: #0a40c9;
+      --green: #2E7A36;
+      --green-dark: #1A7A21;
+      --black: #000000;
+      --white: #ffffff;
+      --gray-light: #F0F0F0;
+      --gold: #E8BF00;
+      --text: #000000;
+      --max-w: 1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text); background: #fff; overflow-x: hidden; }
+
+    img { max-width: 100%; height: auto; }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      background: var(--black);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: #fff;
+      padding: 60px 20px 80px;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1 1 420px; }
+    .hero-img-wrap { flex: 1 1 380px; display: flex; justify-content: center; }
+    .hero-img-wrap img {
+      width: 90%;
+      max-width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .stars { color: var(--gold); font-size: 18px; }
+
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      color: var(--black);
+    }
+    .hero-sub {
+      font-size: clamp(15px, 2vw, 19px);
+      font-weight: 300;
+      color: #222;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .checklist { list-style: none; margin-bottom: 36px; display: flex; flex-direction: column; gap: 12px; }
+    .checklist li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 400; }
+    .checklist li i { color: var(--blue); font-size: 20px; flex-shrink: 0; }
+
+    .btn-main {
+      display: inline-block;
+      background: var(--black);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 600;
+      padding: 20px 44px;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background 0.25s, transform 0.2s;
+      text-align: center;
+    }
+    .btn-main:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .btn-main.wide { display: block; width: 100%; }
+
+    /* ─── BRAND BAR ─── */
+    .brand-bar {
+      background: var(--black);
+      padding: 18px 20px;
+    }
+    .brand-bar-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .brand-bar img { height: 32px; filter: brightness(0) invert(1); opacity: 0.75; }
+
+    /* ─── SECTION HEADER ─── */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
+    .section-header h2 {
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: clamp(15px, 2vw, 20px);
+      font-weight: 300;
+      line-height: 1.6;
+      color: #333;
+    }
+    .divider-blue {
+      width: 70px;
+      height: 5px;
+      background: var(--blue);
+      border-radius: 4px;
+      margin: 18px auto 0;
+    }
+
+    /* ─── FEATURES ─── */
+    .features { padding: 80px 20px 60px; }
+    .features-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .feat-list { flex: 1 1 260px; display: flex; flex-direction: column; gap: 22px; }
+    .feat-item { display: flex; align-items: center; gap: 14px; }
+    .feat-item i { font-size: 28px; color: var(--gold); flex-shrink: 0; }
+    .feat-item span { font-size: 16px; font-weight: 400; }
+    .feat-img { flex: 0 0 300px; display: flex; justify-content: center; }
+    .feat-img img { width: 100%; max-width: 300px; border-radius: 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.1); }
+
+    /* ─── VIRAL ─── */
+    .viral { background: var(--gray-light); padding: 70px 20px; }
+    .viral-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    /* ─── BENEFIT ROW ─── */
+    .benefit-row {
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .benefit-row.alt { background: var(--gray-light); }
+    .benefit-inner {
+      max-width: var(--max-w);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .benefit-inner.reverse { flex-direction: row-reverse; }
+    .benefit-img { flex: 0 0 340px; }
+    .benefit-img img { width: 100%; border-radius: 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.1); }
+    .benefit-text { flex: 1 1 320px; }
+    .benefit-text h3 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .benefit-text p { font-size: clamp(14px, 2vw, 18px); font-weight: 300; line-height: 1.8; color: #333; }
+    .benefit-divider { width: 70px; height: 5px; background: var(--blue); border-radius: 4px; margin: 14px 0; }
+
+    /* ─── ICON CARDS ─── */
+    .icon-cards { background: var(--white); padding: 70px 20px; }
+    .icon-cards-inner { max-width: var(--max-w); margin: 0 auto; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin-top: 10px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .card i { font-size: 36px; color: var(--blue); }
+    .card h4 { font-size: 17px; font-weight: 600; }
+    .card p { font-size: 14px; font-weight: 300; line-height: 1.6; color: #444; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials { background: var(--gray-light); padding: 70px 20px; }
+    .testi-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .testi-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+    .testi-stars { color: var(--gold); margin-bottom: 12px; font-size: 17px; }
+    .testi-text { font-size: 14px; font-weight: 300; line-height: 1.7; color: #333; margin-bottom: 16px; }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #0a40c9);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #fff;
+    }
+    .testi-name { font-weight: 600; font-size: 14px; }
+    .testi-loc { font-size: 12px; color: #888; }
+
+    /* ─── GUARANTEE ─── */
+    .guarantee {
+      background: var(--black);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .guarantee-inner { max-width: 720px; margin: 0 auto; }
+    .guarantee i { font-size: 64px; color: var(--gold); margin-bottom: 20px; display: block; }
+    .guarantee h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; margin-bottom: 16px; }
+    .guarantee p { font-size: 17px; font-weight: 300; line-height: 1.7; opacity: 0.9; }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 700; margin-bottom: 14px; }
+    .cta-inner p { font-size: 17px; font-weight: 300; color: #333; margin-bottom: 36px; line-height: 1.6; }
+    .price-box {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+      display: inline-block;
+      min-width: 260px;
+    }
+    .price-old { font-size: 20px; text-decoration: line-through; color: #999; }
+    .price-new { font-size: 52px; font-weight: 800; color: var(--blue); line-height: 1.1; }
+    .price-save { font-size: 15px; color: var(--green); font-weight: 600; margin-top: 6px; }
+    .cta-trust {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      font-size: 14px;
+      color: #555;
+    }
+    .cta-trust span { display: flex; align-items: center; gap: 6px; }
+    .cta-trust i { color: var(--green); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      color: #888;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+    footer a { color: #aaa; text-decoration: none; }
+
+    /* ─── STICKY CTA (mobile) ─── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 14px 20px;
+      background: var(--black);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+    .sticky-cta .btn-main { font-size: 18px; padding: 16px 20px; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .anim { animation: fadeUp 0.7s ease both; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero-inner { flex-direction: column-reverse; gap: 30px; }
+      .hero-img-wrap img { width: 80%; }
+      .features-inner { flex-direction: column; }
+      .feat-img { order: -1; }
+      .benefit-inner, .benefit-inner.reverse { flex-direction: column; }
+      .benefit-img { flex: unset; width: 100%; }
+      .sticky-cta { display: block; }
+      body { padding-bottom: 80px; }
+      .btn-main { font-size: 17px; padding: 16px 24px; }
+    }
+    @media (max-width: 480px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    ⚡ OFFRE SPÉCIALE LIMITÉE — OBTENEZ VOTRE RÉDUCTION EXCLUSIVE MAINTENANT
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text anim">
+        <div class="hero-rating">
+          <span class="stars">★★★★½</span>
+          <span>N°1 MONDIAL — Le plus noté</span>
+        </div>
+        <h1>L'EpiCooler dont tout le monde parle — et maintenant vous pouvez l'obtenir aussi</h1>
+        <p class="hero-sub">Des milliers de personnes l'ont déjà acheté — obtenez le vôtre maintenant avec une remise exclusive directement en usine, avant qu'il ne soit trop tard !</p>
+        <ul class="checklist">
+          <li><i class="fas fa-check-circle"></i> Qualité premium — Conçu pour durer</li>
+          <li><i class="fas fa-check-circle"></i> Livraison ultra-rapide dans toute la France</li>
+          <li><i class="fas fa-check-circle"></i> Livraison 100% sécurisée et suivie</li>
+          <li><i class="fas fa-check-circle"></i> Livré directement à votre porte</li>
+        </ul>
+        <a href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" id="hero-cta" class="btn-main" target="_blank" rel="noopener">
+          OBTENIR MON PRIX SPÉCIAL AUJOURD'HUI
+        </a>
+      </div>
+      <div class="hero-img-wrap anim" style="animation-delay:0.15s">
+        <img
+          src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
+          alt="EpiCooler – Mini Climatiseur Portable"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND BAR -->
+  <div class="brand-bar">
+    <div class="brand-bar-inner">
+      <span style="color:#fff;font-size:13px;font-weight:500;letter-spacing:1px;">VU DANS LA PRESSE :</span>
+      <span style="color:#ccc;font-weight:700;font-size:18px;letter-spacing:2px;">FORBES</span>
+      <span style="color:#ccc;font-weight:700;font-size:18px;letter-spacing:2px;">LE MONDE</span>
+      <span style="color:#ccc;font-weight:700;font-size:18px;letter-spacing:2px;">20MINUTES</span>
+      <span style="color:#ccc;font-weight:700;font-size:18px;letter-spacing:2px;">BFMTV</span>
+      <span style="color:#ccc;font-weight:700;font-size:18px;letter-spacing:2px;">FIGARO</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Un détail simple qui a changé la façon dont les gens utilisent les choses au quotidien</h2>
+      <p>Pratique, intelligent et déjà dans des milliers de foyers — aucune installation compliquée, aucune courbe d'apprentissage. Des résultats immédiats dès le premier jour.</p>
+    </div>
+    <div class="features-inner">
+      <div class="feat-list">
+        <div class="feat-item"><i class="far fa-star"></i><span>Prêt à l'emploi instantanément</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Facile à intégrer partout</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Design moderne et élégant</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Fonctionne de façon intuitive</span></div>
+      </div>
+      <div class="feat-img">
+        <img
+          src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
+          alt="EpiCooler design compact"
+          loading="lazy"
+        />
+      </div>
+      <div class="feat-list">
+        <div class="feat-item"><i class="far fa-star"></i><span>Conçu pour un usage quotidien</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Garantie 365 jours</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Design confortable</span></div>
+        <div class="feat-item"><i class="far fa-star"></i><span>Polyvalent dans toutes les situations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIRAL SECTION -->
+  <section class="viral">
+    <div class="viral-inner">
+      <div class="section-header">
+        <h2>L'EpiCooler devient viral dans le monde entier</h2>
+        <p>Et il fait déjà partie de la routine quotidienne de milliers de personnes</p>
+        <div class="divider-blue"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFIT 1 -->
+  <div class="benefit-row">
+    <div class="benefit-inner">
+      <div class="benefit-text">
+        <h3>Tendance mondiale — L'un des produits les plus achetés ces derniers jours</h3>
+        <div class="benefit-divider"></div>
+        <p>L'EpiCooler a dépassé 250 000 ventes au lancement — en moins de 24 heures. Rejoignez les milliers de Français qui ont déjà fait le choix intelligent.</p>
+      </div>
+      <div class="benefit-img">
+        <img
+          src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_1.png"
+          alt="EpiCooler tendance"
+          loading="lazy"
+          onerror="this.src='https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg'"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFIT 2 -->
+  <div class="benefit-row alt">
+    <div class="benefit-inner reverse">
+      <div class="benefit-text">
+        <h3>Le produit le plus recommandé par les influenceurs dans les réseaux sociaux</h3>
+        <div class="benefit-divider"></div>
+        <p>Des milliers de créateurs et micro-célébrités se précipitent pour obtenir leur EpiCooler — et en parlent tous les jours. Le bouche-à-oreille ne ment pas.</p>
+      </div>
+      <div class="benefit-img">
+        <img
+          src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/3.3_imagem_beneficio_2.png"
+          alt="EpiCooler influenceurs"
+          loading="lazy"
+          onerror="this.src='https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg'"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFIT 3 -->
+  <div class="benefit-row">
+    <div class="benefit-inner">
+      <div class="benefit-text">
+        <h3>Sans aucun doute — Le produit N°1 dans sa catégorie en ce moment</h3>
+        <div class="benefit-divider"></div>
+        <p>Il coche toutes les cases : design moderne, utilisation sans effort, construction légère — et surtout 100% fonctionnel. Exactement ce que le marché attendait.</p>
+      </div>
+      <div class="benefit-img">
+        <img
+          src="https://get-epicoolerl.shop/wp-content/uploads/2026/05/MV9IZXJvX0VwaWNvb2xlcl9ERS5qcGVn-w_500.jpeg"
+          alt="EpiCooler numéro 1"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON CARDS -->
+  <section class="icon-cards">
+    <div class="icon-cards-inner">
+      <div class="section-header">
+        <h2>Le produit pour plus de confort lors des journées chaudes</h2>
+        <p>Refroidissement compact pour la maison, le bureau ou en déplacement</p>
+        <div class="divider-blue"></div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <i class="fas fa-award"></i>
+          <h4>Meilleure Technologie</h4>
+          <p>Fabriqué avec des matériaux de haute qualité répondant aux normes internationales — pour une performance maximale tous les jours.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-leaf"></i>
+          <h4>Écologique et Durable</h4>
+          <p>Conçu pour réduire la consommation d'énergie sans compromettre les performances. Bon pour vous, bon pour la planète.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Garantie 365 Jours</h4>
+          <p>Achetez en toute confiance. Si vous n'êtes pas satisfait pour quelque raison que ce soit, nous vous remboursons intégralement.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-truck-fast"></i>
+          <h4>Livraison Express</h4>
+          <p>Livraison rapide et suivie directement chez vous en France. Commandez aujourd'hui, recevez rapidement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>Ce que disent nos clients en France</h2>
+      <p>Des milliers de familles françaises font déjà confiance à l'EpiCooler</p>
+      <div class="divider-blue"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Incroyable ! J'étais sceptique au début mais l'EpiCooler dépasse vraiment toutes mes attentes. Il refroidit rapidement et le design est superbe. Je l'ai commandé et reçu en quelques jours. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sophie M.</div>
+            <div class="testi-loc">Lyon, France ✓ Achat vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« J'en ai acheté deux — un pour le bureau et un pour la maison. Ma productivité a augmenté car je ne souffre plus de la chaleur en été. Je recommande à 100% ! »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div>
+            <div class="testi-name">Thomas R.</div>
+            <div class="testi-loc">Paris, France ✓ Achat vérifié</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Parfait pour l'été ! Compact, silencieux et très efficace. J'adore le fait qu'il soit si facile à utiliser. Mon mari a même voulu le sien ! »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Marie-Claire D.</div>
+            <div class="testi-loc">Marseille, France ✓ Achat vérifié</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="guarantee-inner">
+      <i class="fas fa-shield-check"></i>
+      <h2>Garantie totale de satisfaction 365 jours</h2>
+      <p>Nous sommes tellement confiants dans la qualité de l'EpiCooler que nous offrons une garantie complète d'un an. Si vous n'êtes pas entièrement satisfait, nous vous remboursons sans poser de questions.</p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Obtenez votre EpiCooler avec la remise exclusive d'aujourd'hui</h2>
+      <p>Les stocks sont limités. Des milliers de Français ont déjà commandé. Ne laissez pas passer cette opportunité !</p>
+      <div class="price-box">
+        <div class="price-old">Prix habituel : 89,90 €</div>
+        <div class="price-new">49,90 €</div>
+        <div class="price-save">🎉 Vous économisez 40,00 € — Offre limitée !</div>
+      </div>
+      <br/>
+      <a href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" id="final-cta" class="btn-main wide" style="max-width:520px;margin:0 auto;" target="_blank" rel="noopener">
+        JE VEUX MON EPICOOLER MAINTENANT →
+      </a>
+      <div class="cta-trust">
+        <span><i class="fas fa-lock"></i> Paiement 100% sécurisé</span>
+        <span><i class="fas fa-truck"></i> Livraison rapide en France</span>
+        <span><i class="fas fa-undo"></i> Garantie 365 jours</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EpiCooler®. Tous droits réservés. |
+      <a href="#">Politique de confidentialité</a> |
+      <a href="#">Conditions d'utilisation</a> |
+      <a href="#">Contact</a>
+    </p>
+    <p style="margin-top:8px; font-size:11px; opacity:0.6;">
+      Les résultats peuvent varier. Les témoignages sont représentatifs mais non garantis.
+    </p>
+  </footer>
+
+  <!-- STICKY CTA (mobile) -->
+  <div class="sticky-cta">
+    <a href="https://www.traceroutehub.com/2W8NHCFB/222P9D2D/?uid=4966" class="btn-main wide" target="_blank" rel="noopener">
+      OBTENIR MON EPICOOLER →
+    </a>
+  </div>
+
+  <script>
+    // Intersection observer for scroll animations
+    const animEls = document.querySelectorAll('.card, .testi-card, .benefit-text, .benefit-img, .feat-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    animEls.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
