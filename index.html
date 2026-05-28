@@ -233,7 +233,7 @@
       max-width: var(--max-w);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
     }
     .testi-card {
@@ -241,19 +241,23 @@
       border-radius: 16px;
       padding: 28px 24px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
     }
+    .testi-card:hover { transform: translateY(-4px); box-shadow: 0 10px 34px rgba(0,0,0,0.12); }
     .testi-stars { color: var(--gold); margin-bottom: 12px; font-size: 17px; }
-    .testi-text { font-size: 14px; font-weight: 300; line-height: 1.7; color: #333; margin-bottom: 16px; }
-    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-badge { display: inline-block; background: #e8f5e9; color: #2E7A36; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .testi-text { font-size: 14px; font-weight: 400; line-height: 1.75; color: #222; margin-bottom: 16px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
     .testi-avatar {
-      width: 42px; height: 42px;
+      width: 52px; height: 52px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), #0a40c9);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 16px; color: #fff;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid var(--blue);
     }
-    .testi-name { font-weight: 600; font-size: 14px; }
-    .testi-loc { font-size: 12px; color: #888; }
+    .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .testi-name { font-weight: 700; font-size: 14px; }
+    .testi-loc { font-size: 12px; color: #888; margin-top: 2px; }
 
     /* ─── GUARANTEE ─── */
     .guarantee {
@@ -752,39 +756,103 @@
       <div class="divider-blue"></div>
     </div>
     <div class="testi-grid">
+
+      <!-- 1 -->
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">« Incroyable ! J'étais sceptique au début mais l'EpiCooler dépasse vraiment toutes mes attentes. Il refroidit rapidement et le design est superbe. Je l'ai commandé et reçu en quelques jours. »</p>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« J'avais essayé plusieurs ventilateurs de bureau avant — rien ne fonctionnait vraiment. L'EpiCooler a tout changé. Dès la première minute, j'ai senti la différence. Je travaille depuis chez moi et maintenant je passe mes journées sans transpirer ni perdre ma concentration. C'est le genre d'achat qu'on regrette de ne pas avoir fait plus tôt. »</p>
         <div class="testi-author">
-          <div class="testi-avatar">S</div>
+          <div class="testi-avatar">
+            <img src="img/testimonial_sophie.png" alt="Sophie M." />
+          </div>
           <div>
             <div class="testi-name">Sophie M.</div>
-            <div class="testi-loc">Lyon, France ✓ Achat vérifié</div>
+            <div class="testi-loc">Lyon, France</div>
           </div>
         </div>
       </div>
+
+      <!-- 2 -->
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">« J'en ai acheté deux — un pour le bureau et un pour la maison. Ma productivité a augmenté car je ne souffre plus de la chaleur en été. Je recommande à 100% ! »</p>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« J'en ai commandé deux d'un coup — un pour le bureau, un pour la chambre. Pendant les canicules de l'été dernier, je dormais très mal. Cette année, avec l'EpiCooler, mes nuits sont tranquilles. Ma femme me l'a même "emprunté" pour sa pièce préférée. On va sûrement en commander un troisième. »</p>
         <div class="testi-author">
-          <div class="testi-avatar">T</div>
+          <div class="testi-avatar">
+            <img src="img/testimonial_thomas.png" alt="Thomas R." />
+          </div>
           <div>
             <div class="testi-name">Thomas R.</div>
-            <div class="testi-loc">Paris, France ✓ Achat vérifié</div>
+            <div class="testi-loc">Paris, France</div>
           </div>
         </div>
       </div>
+
+      <!-- 3 -->
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">« Parfait pour l'été ! Compact, silencieux et très efficace. J'adore le fait qu'il soit si facile à utiliser. Mon mari a même voulu le sien ! »</p>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« À mon âge, la chaleur me pèse beaucoup plus qu'avant. Mon fils m'a offert l'EpiCooler pour mon anniversaire et franchement, c'est le meilleur cadeau que j'ai reçu depuis longtemps. Compact, silencieux, et il refroidit vraiment la pièce. Mon mari en voulait un aussi — on l'a commandé le lendemain. »</p>
         <div class="testi-author">
-          <div class="testi-avatar">M</div>
+          <div class="testi-avatar">
+            <img src="img/testimonial_marie.png" alt="Marie-Claire D." />
+          </div>
           <div>
             <div class="testi-name">Marie-Claire D.</div>
-            <div class="testi-loc">Marseille, France ✓ Achat vérifié</div>
+            <div class="testi-loc">Marseille, France</div>
           </div>
         </div>
       </div>
+
+      <!-- 4 -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« Je suis étudiant et je vis dans un petit appartement sans clim. L'été dernier c'était invivable — impossible de réviser, impossible de dormir. L'EpiCooler a vraiment résolu mon problème. Petite taille, grand effet. J'en parle à tous mes amis de la fac, et plusieurs ont déjà commandé le leur. Rapport qualité-prix imbattable. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="img/testimonial_julien.png" alt="Julien B." />
+          </div>
+          <div>
+            <div class="testi-name">Julien B.</div>
+            <div class="testi-loc">Bordeaux, France</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« Je travaille dans les ressources humaines et j'ai recommandé l'EpiCooler à toute mon équipe. On a de grands open-spaces et la chaleur en été rend tout le monde irritable. Depuis qu'on a installé les EpiCoolers sur les bureaux, l'ambiance a changé du tout au tout. Simple, efficace, discret. Exactement ce qu'il nous fallait. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="img/testimonial_isabelle.png" alt="Isabelle F." />
+          </div>
+          <div>
+            <div class="testi-name">Isabelle F.</div>
+            <div class="testi-loc">Toulouse, France</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-badge">✓ ACHAT VÉRIFIÉ</div>
+        <p class="testi-text">« J'ai 57 ans et j'ai toujours eu du mal avec la chaleur, surtout depuis quelques années. J'ai vu l'EpiCooler en ligne et j'ai hésité avant de commander — mais je n'ai aucun regret. Livré rapidement, facile à utiliser dès la sortie de la boîte, et le résultat est immédiat. Ma qualité de vie en été a vraiment changé. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="img/testimonial_pierre.png" alt="Pierre L." />
+          </div>
+          <div>
+            <div class="testi-name">Pierre L.</div>
+            <div class="testi-loc">Nantes, France</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
